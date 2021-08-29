@@ -1,0 +1,48 @@
+import discord
+
+client = discord.Client()
+
+
+@client.event
+async def on_ready():
+    print("Je suis pret !")
+
+
+@client.event
+async def on_message(message): 
+    if message.content.lower() == '?help':
+        await message.channel.send('Vous avez entré la commande ?help , peu de chose pour le moment mais ça arrive... en cours de développement , vous avez quelque commandes prêtes à utiliser comme | ?commande')
+
+    if message.content.lower() == '?creationbot':
+        await message.channel.send('Le bot a été crée le 29/08/2021 vers 14h00 =)')
+
+    if message.content.lower() == '?souris':
+        await message.channel.send('Voila une bonne souris https://www.amazon.fr/Razer-DeathAdder-V2-Ergonomie-Speedflex/dp/B081QX9V2Y/ref=sr_1_4_sspa?__mk_fr_FR=ÅMÅŽÕÑ&dchild=1&keywords=souris&qid=1630239383&sr=8-4-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzR0tLU0FaMEY5U01TJmVuY3J5cHRlZElkPUEwMjM3NTcyU1ZLOU9TTUhSMEpFJmVuY3J5cHRlZEFkSWQ9QTAxODg3MDMyVEJPQzRUR1VJS0cwJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==')or('https://www.amazon.fr/Logitech-capteur-programmables-ordinateur-portable/dp/B07GS6ZB7T/ref=sr_1_5?__mk_fr_FR=ÅMÅŽÕÑ&dchild=1&keywords=souris&qid=1630239904&sr=8-5')
+
+    if message.content.lower() == '?caca':
+        await message.channel.send('Bouuh sa pue 💩')
+
+    if message.content.lower() == '?config-gta':
+        await message.channel.send('Système d\'exploitation: Windows Vista, 7 ou 8. processeur: Intel Core 2 Duo 2,4 GHz ou équivalent. Mémoire vive : 3 Go.Espace de stockage : 20 Go. Carte graphique: Nvidia 9600 avec 512 Mo de mémoire minimum et équivalent. Carte son: compatible DirectX 9') 
+   
+    if message.content.lower() == '?con':
+        await message.channel.send('Bah tu fait expres ou quoi c\'est logique ?')
+    
+    if message.content.lower() == '?commande':
+        await message.channel.send('Plusieurs commande a disposition | ?creationBot | ?caca | ?con | ?souris | ?config-gta')
+
+    if message.content.lower() == 'ping':
+        await message.channel.send('pong')
+        
+            
+    
+  
+    
+
+
+
+
+
+
+client.run("ODgxNTAyNDg0ODAyMTk5NTcy.YStxKQ.P76JPlhT_q_7BxSrFry18bmf0hY")
+
